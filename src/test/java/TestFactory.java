@@ -8,8 +8,9 @@ public class TestFactory {
 
 
 @Test
-    public void browser() {
-    WebDriver wd = new WebDriverFactory().create("chrome");
+    public void webBrowser() {
+    String browser = System.getProperty("browser");
+    WebDriver wd = new WebDriverFactory().create(browser);
     wd.get("https://otus.ru/");
 }
 }
